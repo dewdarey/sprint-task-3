@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sprint Task 3</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="change">
+	    <table cellspacing="5">
+		    <tr>
+		        <th colspan="2">Введите сумму:</th>
+		        <th>KZT (tenge)</th>
+		        <th>USD (dollar)</th>
+		        <th>EUR (euro)</th>
+		    </tr>
+
+		    <tr>
+		        <td><input type="text" id="amount" name="amount" onkeyup="calc()"></td>
+		        <td>
+		        	<select onchange="calc()">
+				        <option id="kzt">KZT</option>
+				        <option id="usd">USD</option>
+				        <option id="eur">EUR</option>
+			        </select>
+			    </td>
+			    <td>
+			    	<label for="toKzt" id="toKzt">-</label>
+			    </td>
+			    <td>
+			    	<label for="toUsd" id="toUsd">-</label>
+			    </td>
+			    <td>
+			    	<label for="toEur" id="toEur">-</label>
+			    </td>
+		   </tr>
+		</table>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
+
+
+
+<!-- let toKzt = document.getElementById('toKzt');
+let toUsd = document.getElementById('toUsd');
+let toEur = document.getElementById('toEur');
+console.log(toKzt.innerText);
+
+function calc() {
+	let amount = document.getElementById('amount').innerText;
+
+	if (document.getElementById('usd').selected) {
+		// toKzt.innerText = (amount / 429);
+		toKzt.innerText = amount.value;
+		console.log(amount.value);
+	}
+} -->
